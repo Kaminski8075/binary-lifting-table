@@ -1,6 +1,6 @@
 {
   "name": "binary-lifting-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Binary lifting table for kth-ancestor and LCA queries on a rooted tree.",
   "type": "module",
   "main": "src/index.js",
