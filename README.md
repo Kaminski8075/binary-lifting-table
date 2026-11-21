@@ -56,3 +56,10 @@ requested ancestor would be above the root. Callers that want a different
 sentinel (or an exception) should check `depth(node) < k` first. The library
 chooses `-1` because it is the same value the constructor uses for "no parent",
 so a tree can be round-tripped through the table without a second convention.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
